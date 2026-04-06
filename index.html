@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <!-- Sets character encoding -->
+    <meta charset="UTF-8">
+
+```
+<!-- Makes the page responsive on all devices -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- Title shown on browser tab -->
+<title>Weather App</title>
+
+<!-- LINKING CSS FILE -->
+<!-- This connects style.css to this HTML file -->
+<link rel="stylesheet" href="style.css">
+```
+
+</head>
+<body>
+
+```
+<!-- MAIN APP CONTAINER -->
+<!-- This div holds the entire weather application -->
+<div class="weather-app">
+
+    <!-- APP HEADING -->
+    <h1>Weather Application</h1>
+
+    <!-- SEARCH CONTAINER -->
+    <!-- Contains input box and search button -->
+    <div class="search-container">
+
+        <!-- INPUT BOX -->
+        <!-- User enters city name here -->
+        <input 
+            type="text" 
+            id="cityInput" 
+            placeholder="Enter city name">
+
+        <!-- SEARCH BUTTON -->
+        <!-- When clicked, JavaScript will fetch weather data -->
+        <button id="searchBtn">
+            Search
+        </button>
+    </div>
+
+    <!-- WEATHER DISPLAY CONTAINER -->
+    <!-- Weather results will be shown here dynamically -->
+    <div class="weather-result">
+
+        <!-- CITY NAME DISPLAY -->
+        <h2 id="cityName">City Name</h2>
+
+        <!-- TEMPERATURE DISPLAY -->
+        <p id="temperature">Temperature: -- °C</p>
+
+        <!-- WEATHER CONDITION DISPLAY -->
+        <p id="condition">Condition: --</p>
+
+        <!-- HUMIDITY DISPLAY -->
+        <p id="humidity">Humidity: --%</p>
+
+        <!-- WIND SPEED DISPLAY -->
+        <p id="wind">Wind Speed: -- m/s</p>
+
+        <!-- ERROR MESSAGE -->
+        <!-- Shown if city not found or input is empty -->
+        <p id="errorMessage"></p>
+    </div>
+
+</div>
+
+<!-- LINKING JAVASCRIPT FILE -->
+<!-- This connects script.js to this HTML file -->
+<!-- Placed at bottom so HTML loads first -->
+<script src="script.js"></script>
+```
+
+</body>
+</html>

@@ -1,0 +1,153 @@
+/* ============================
+GLOBAL STYLES
+These apply across the whole page
+============================ */
+
+/* Reset default margins & padding */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  }
+
+/* Body styles: background, font, center alignment */
+body {
+font-family: Arial, sans-serif;
+background: linear-gradient(to bottom right, #4e54c8, #8f94fb);
+color: #ffffff;
+min-height: 100vh;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+/* ============================
+MAIN APP CONTAINER
+This styles the outer wrapper “.weather-app”
+============================ */
+
+.weather-app {
+width: 100%;
+max-width: 400px;      /* Limits width for good UI */
+background: rgba(255, 255, 255, 0.15);
+border-radius: 12px;
+padding: 20px;
+text-align: center;
+backdrop-filter: blur(8px);  /* Glass-like effect */
+box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Main App Heading */
+.weather-app h1 {
+font-size: 2rem;
+margin-bottom: 15px;
+font-weight: bold;
+}
+
+/* ============================
+SEARCH SECTION
+This styles the input and button bar
+============================ */
+
+.search-container {
+display: flex;
+gap: 8px;                /* Space between input + button */
+justify-content: center;
+margin-bottom: 20px;
+}
+
+/* INPUT FIELD
+This styles the text input where user types city name */
+#cityInput {
+flex: 1;                 /* Takes remaining space */
+padding: 10px;
+border-radius: 8px;
+border: none;
+font-size: 1rem;
+}
+
+/* SEARCH BUTTON
+This styles the search button */
+#searchBtn {
+padding: 10px 15px;
+background: #ffce00;
+color: #000;
+border: none;
+border-radius: 8px;
+font-weight: bold;
+cursor: pointer;
+transition: 0.2s ease;
+}
+
+/* Hover effect makes button interactive */
+#searchBtn:hover {
+background: #ffd633;
+transform: scale(1.05);
+}
+
+/* ============================
+WEATHER RESULT SECTION
+This styles all the weather display info
+============================ */
+
+.weather-result {
+background: rgba(0, 0, 0, 0.25);
+border-radius: 10px;
+padding: 15px;
+margin-top: 10px;
+}
+
+/* City name display */
+#cityName {
+font-size: 1.6rem;
+margin-bottom: 10px;
+}
+
+/* Temperature
+This is larger to emphasize it */
+#temperature {
+font-size: 1.4rem;
+margin-bottom: 8px;
+}
+
+/* Generic weather info
+For condition, humidity, wind */
+.weather-result p {
+font-size: 1rem;
+margin: 4px 0;
+}
+
+/* ERROR MESSAGE
+Shown when city invalid or input empty */
+#errorMessage {
+color: #ff4d4d;
+font-weight: bold;
+margin-top: 8px;
+}
+
+/* ============================
+RESPONSIVE BEHAVIOR
+Ensures the layout adapts on small screens
+============================ */
+
+@media (max-width: 480px) {
+.weather-app {
+padding: 15px;
+}
+#cityInput {
+font-size: 0.9rem;
+}
+#searchBtn {
+font-size: 0.9rem;
+}
+}
+
+/* ============================
+OPTIONAL ERROR STATES
+When input is empty or API fails
+============================ */
+
+.input-error {
+border: 2px solid #ff4d4d;
+}
